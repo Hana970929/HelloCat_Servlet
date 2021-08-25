@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>장바구니</title>
+<link href="CSS/HC.css" rel="stylesheet" type="text/css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+function itemSum(frm)
+{
+   var sum = 0;
+   var count = frm.chkbox.length;
+   for(var i=0; i < count; i++ ){
+       if( frm.chkbox[i].checked == true ){
+	    sum += parseInt(frm.chkbox[i].value);
+       }
+   }
+   frm.total_sum.value = sum;
+}
+	function getDiscount() {
+	}
+	$(function () {
+		total = 0;
+		$("#cb1").change(function(){
+	        if($("#cb1").is(":checked")){
+	        	price = $("#pd1Pr").text();
+				price = price.replace('원','');
+				total += Number(price);
+	        } else {	        	
+	        	price = $("#pd1Pr").text();
+				price = price.replace('원','');
+				total -= Number(price);
+	        }
+		$("#ttprice").text(total+"원");
+		discount = total/10;
+		$("#discountpr").text(discount+"원");
+		last = total*0.9+2500;
+		$("#lastPr").text(last+"원");		
+		});
+		$("#cb2").change(function(){
+	        if($("#cb2").is(":checked")){
+	        	price = $("#pd2Pr").text();
+				price = price.replace('원','');
+				total += Number(price);
+	        } else {	        	
+	        	price = $("#pd2Pr").text();
+				price = price.replace('원','');
+				total -= Number(price);
+	        }
+		$("#ttprice").text(total+"원");
+		discount = total/10;
+		$("#discountpr").text(discount+"원");
+		last = total*0.9+2500;
+		$("#lastPr").text(last+"원");		
+		});
+		$("#cb3").change(function(){
+	        if($("#cb3").is(":checked")){
+	        	price = $("#pd3Pr").text();
+				price = price.replace('원','');
+				total += Number(price);
+	        } else {	        	
+	        	price = $("#pd3Pr").text();
+				price = price.replace('원','');
+				total -= Number(price);
+	        }
+		$("#ttprice").text(total+"원");
+		discount = total/10;
+		$("#discountpr").text(discount+"원");
+		last = total*0.9+2500;
+		$("#lastPr").text(last+"원");		
+		});
+		if($("#cb1").is(":checked")) {
+			price = $("#pd1Pr").text();
+			price = price.replace('원','');
+			total += Number(price);
+		}
+		if($("#cb2").is(":checked")) {
+			price = $("#pd2Pr").text();
+			total += Number(price.replace('원',''));
+		}
+		if($("#cb3").is(":checked")) {
+			price = $('#pd3Pr').text();
+			total += Number(price.replace('원',''));
+		}
+		$("#ttprice").text(total+"원");
+		discount = total/10;
+		$("#discountpr").text(discount+"원");
+		last = total*0.9+2500;
+		$("#lastPr").text(last+"원");		
+	});
+</script>
+</head>
+<body bgcolor="#f1e6d3">
+	<div class="basic">
+		<div class="textCenter divCenter firstline">
+			<div class="logo dib">
+				<a href="store_main.html">
+					<img src="Images/logo.png" width="270px"/>
+				</a>
+			</div>
+			<div class="fl comSt">
+				<a href="https://shop.witkorea.kr/"><img src="Images/community.png" class="menuImg"/></a>
+			</div>
+			<div class="fl comSt">
+				<a href="store_main.html"><img src="Images/store.png" class="menuImg"/></a>
+			</div>
+			<div class="fl searchbar">
+				<form action="">
+					<label for="input1">
+					</label><input type="text" id="input1" name="search" class="search" placeholder=" 통합검색"/>
+					<input type="submit" class="btn_search" name="submit" alt="search" value="">
+				</form>
+			</div>
+			<div class="fl cart">
+				<a href="cartList.html"><img src="Images/cart.png" class="cartImg"/></a>
+			</div>
+			<div class="fl comSt">
+				<a href="https://shop.witkorea.kr/"><img src="Images/login.png" class="menuImg"/></a>
+			</div>
+			<div class="fl comSt">
+				<a href="https://shop.witkorea.kr/"><img src="Images/join.png" class="menuImg"/></a>
+			</div>
+		</div>
+		<div class="bgDark secondLine">
+			<div class="fl storeHome">
+				<a href="store_main.html"><img src="Images/storehome.png" class="storeMenuImg"/></a>
+			</div>
+			<div class="fl storeMenu">
+				<a href="store_food.html"><img src="Images/yumyum.png" class="storeMenuImg"/></a>
+			</div>
+			<div class="fl storeMenu">
+				<a href="store_toy.html"><img src="Images/play.png" class="storeMenuImg"/></a>
+			</div>
+			<div class="fl storeMenu">
+				<a href="store_goods.html"><img src="Images/good.png" class="storeMenuImg"/></a>
+			</div>
+			<div class="footprint">
+				<img src="Images/footprint.png" class="footPrintImg">
+			</div>
+		</div>
+	</div>
+	<div class="divCenter cartDiv">
+		<div class="cartProduct">
+		<div class="fl cartCheck">
+			<input type="checkbox" name="xxx" value="yyy" id="cb1" checked>
+			<label for="cb1"></label>
+		</div>
+			<div class="fl cartPdImgDiv">
+			<img src="Images/pd_pic.png" class="cartPdImg"/>
+			</div>
+			<div class="fl">
+				<h1 class="brown">상품이름</h1>
+				<h3 class="brown">상품 설명</h3>
+			</div>
+			<div class="molaaaa">
+				<div class="showHowMuch">
+					<h1 class="brown">상품금액</h1>
+				</div>
+				<div class="showThePrice" id="pd1Pr">
+					<h1>5000원</h1>
+				</div>
+			</div>
+		</div>
+		<div class="cartProduct">
+		<div class="fl cartCheck">
+			<input type="checkbox" name="xxx" value="yyy" id="cb2" checked>
+			<label for="cb2"></label>
+		</div>
+			<div class="fl cartPdImgDiv">
+			<img src="Images/pd_pic.png" class="cartPdImg"/>
+			</div>
+			<div class="fl">
+				<h1 class="brown">상품이름</h1>
+				<h3 class="brown">상품 설명</h3>
+			</div>
+			<div class="molaaaa">
+				<div class="showHowMuch">
+					<h1 class="brown">상품금액</h1>
+				</div>
+				<div class="showThePrice" id="pd2Pr">
+					<h1>7000원</h1>
+				</div>
+			</div>
+		</div>
+		<div class="cartProduct">
+		<div class="fl cartCheck">
+			<input type="checkbox" name="xxx" value="yyy" id="cb3" checked>
+			<label for="cb3"></label>
+		</div>
+			<div class="fl cartPdImgDiv">
+			<img src="Images/pd_pic.png" class="cartPdImg"/>
+			</div>
+			<div class="fl">
+				<h1 class="brown">상품이름</h1>
+				<h3 class="brown">상품 설명</h3>
+			</div>
+			<div class="molaaaa">
+				<div class="showHowMuch">
+					<h1 class="brown">상품금액</h1>
+				</div>
+				<div class="showThePrice" id="pd3Pr">
+					<h1>9000원</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="resultTable">
+		<div class="innerResult">
+			<br/>
+				<h1 class="brown">선택상품</h1>
+			<div class="fl leftinner">
+				<h2 class="brown">총 상품금액</h2>
+				<h2 class="brown">총 배송비</h2>
+				<h2 class="brown">총 할인</h2>
+			</div>
+			<div class="fl rightinner">
+				<h1 class="brown"> </h1>
+				<h2 id="ttprice"></h2>
+				<h2 class="brown">2500원</h2>
+				<h2 id="discountpr"></h2>				
+			</div>
+		</div>
+		<div class="lastPrice">
+			<div class="fl innerlast">
+				<h1 class="brown">총 가격</h1>
+			</div>
+			<div class="fl innerlast2">
+				<h2 id="lastPr"></h2>
+			</div>
+		</div>
+	</div>
+	<div class="orderBtnDiv">
+		<button type="button" onClick="location.href='buyproduct.html'" class="orderBtn">
+			주문하기
+		</button>
+	</div>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

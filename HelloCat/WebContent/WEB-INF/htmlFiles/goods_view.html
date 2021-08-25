@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>상품 상세페이지</title>
+<link href="CSS/HC.css" rel="stylesheet" type="text/css"/>
+<style>
+</style>
+</head>
+<body bgcolor="#f1e6d3">
+	<div class="basic">
+		<div class="textCenter divCenter firstline">
+			<div class="logo dib">
+				<a href="store_main.html">
+					<img src="Images/logo.png" width="270px"/>
+				</a>
+			</div>
+			<div class="fl comSt">
+				<a href="https://shop.witkorea.kr/"><img src="Images/community.png" class="menuImg"/></a>
+			</div>
+			<div class="fl comSt">
+				<a href="store_main.html"><img src="Images/store.png" class="menuImg"/></a>
+			</div>
+			<div class="fl searchbar">
+				<form action="">
+					<label for="input1">
+					</label><input type="text" id="input1" name="search" class="search" placeholder=" 통합검색"/>
+					<input type="submit" class="btn_search" name="submit" alt="search" value="">
+				</form>
+			</div>
+			<div class="fl cart">
+				<a href="cartList.html"><img src="Images/cart.png" class="cartImg"/></a>
+			</div>
+			<div class="fl comSt">
+				<a href="https://shop.witkorea.kr/"><img src="Images/login.png" class="menuImg"/></a>
+			</div>
+			<div class="fl comSt">
+				<a href="https://shop.witkorea.kr/"><img src="Images/join.png" class="menuImg"/></a>
+			</div>
+		</div>
+		<div class="bgDark secondLine">
+			<div class="fl storeHome">
+				<a href="store_main.html"><img src="Images/storehome.png" class="storeMenuImg"/></a>
+			</div>
+			<div class="fl storeMenu">
+				<a href="store_food.html"><img src="Images/yumyum.png" class="storeMenuImg"/></a>
+			</div>
+			<div class="fl storeMenu">
+				<a href="store_toy.html"><img src="Images/play.png" class="storeMenuImg"/></a>
+			</div>
+			<div class="fl storeMenu">
+				<a href="store_goods.html"><img src="Images/good.png" class="storeMenuImg"/></a>
+			</div>
+			<div class="footprint">
+				<img src="Images/footprint.png" class="footPrintImg">
+			</div>
+		</div>
+	</div>
+	<!-- 여기까지가 기본 -->
+	<div class="viewGoodsDiv">
+		<div class="fl viewGoodsImg">
+			<img src="Images/pd_pic.png" class="goodsImg"/>
+		</div>
+		<div class="fl goodsInfo">
+			<div class="goodsName">
+				<p>[ 상품의 이름입니당 ]</p>
+			</div>
+			<div class="showStars">
+				<a href="reviewBoard.html"><img src="Images/rvStar.png" class="fl starImg"/></a>
+				<a href="reviewBoard.html"><img src="Images/rvStar.png" class="fl starImg"/></a>
+				<a href="reviewBoard.html"><img src="Images/rvStar.png" class="fl starImg"/></a>
+				<a href="reviewBoard.html"><img src="Images/rvStar.png" class="fl starImg"/></a>
+				<a href="reviewBoard.html"><img src="Images/rvStar.png" class="fl starImg"/></a>
+			</div>
+			<div class="goodsExplain">
+				<p>상품의 설명입니다 이거 완전 좋은 상품임</p>
+			</div>
+			<div class="diliveryPrice">
+				<p>택배 배송비 : 2500원</p>
+				<input type='button' onclick='count("plus")' value='+'/>
+			<input type='button' onclick='count("minus")' value='-'/>
+				<input name="quentity" class="selectQuentity">
+			</div>
+			<div class="goodsPrice">
+				<p>총 가격 : 4억 2500원</p>
+			</div>
+			<div class="fl twoBtnDiv">
+				<button type="button" onClick="location.href='cartList.html'" class="twoBtn">
+				장바구니
+				</button>
+			</div>
+			<div class="fl twoBtnDiv">
+				<button type="button" onClick="location.href='buyproduct.html'" class="twoBtn"
+				style="margin-left:50px;">
+				구매하기
+				</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
